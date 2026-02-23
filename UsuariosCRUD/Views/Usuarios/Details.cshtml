@@ -1,0 +1,47 @@
+﻿@model UsuariosCRUD.Models.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles del usuario</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Profesion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profesion)
+        </dd>
+
+    </dl>
+</div>
+<div class="col-md-offset-2 col-md-2" style="margin-top:15px;">
+    <div style="display:flex; gap:12px;">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Cedula }, new { @class = "btn btn-primary", style = "flex:1; text-align:center;" })
+        @Html.ActionLink("Volver", "Index", null, new { @class = "btn btn-secondary", style = "flex:1; text-align:center;" })
+    </div>
+
+</div>
+
+
